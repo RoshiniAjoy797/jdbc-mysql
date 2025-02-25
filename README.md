@@ -17,9 +17,15 @@
 5. **Process the Results** (if applicable)  
    - If using `SELECT`, retrieve and handle the data.  
 
-6. **Close the Connection**  
+6. **Implement JDBC Transactions**  
+   - Disable auto-commit using `con.setAutoCommit(false)`.  
+   - Execute multiple queries as a single transaction.  
+   - If all operations succeed, commit using `con.commit()`.  
+   - If any operation fails, roll back using `con.rollback()`.  
+
+7. **Close the Connection**  
    - Always close the connection to free up resources.  
 
----
+------------------------------------------------------------
 
-These are the basic steps to interact with a database using JDBC.  
+These are the essential steps for working with JDBC, including transaction management.  
